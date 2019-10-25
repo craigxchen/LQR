@@ -3,7 +3,7 @@
 ## Getting Started
 
 1. Install the prerequisite libraries: `pip install numpy scipy matplotlib`
-3. Run training: `python benchmark.py`
+3. Run example: `python benchmark.py`
 
 ## Authors
 
