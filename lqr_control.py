@@ -65,4 +65,24 @@ class control:
         plt.grid(True)
         plt.show()
         return
+    
+    # TODO fix
+    def plot_states(x,ylabel,R):
+        fig, ax = plt.subplots()
+        colors = [ '#B53737', '#0B6623', '#2D328F'] # red, green, blue
+        label_fontsize = 18
+    
+        t = np.arange(0,x.shape[1])
+        # change to be a loop in the future that supports N colors
+        ax.plot(t,x[0],color=colors[0],label='Node 1')
+        ax.plot(t,x[1],color=colors[1],label='Node 2')
+        ax.plot(t,x[2],color=colors[2],label='Node 3')
+            
+        ax.set_xlabel('Time',fontsize=label_fontsize)
+        ax.set_ylabel(ylabel + ' (R={})'.format(R[0][0]),fontsize=label_fontsize)
+        plt.legend(fontsize=label_fontsize)
+    
+        plt.grid(True)
+        plt.show()
+        return
 
