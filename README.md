@@ -3,7 +3,7 @@
 ## Getting Started
 
 1. Install the prerequisite libraries: `pip install numpy scipy matplotlib`
-3. Run example: `python benchmark.py`
+2. Run example: `python 1dim_test.py`
 
 ## Authors
 
