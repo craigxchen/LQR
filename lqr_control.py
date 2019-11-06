@@ -31,7 +31,7 @@ class control:
         
         return F, S, eigVals
     
-    def simulate_discrete(A,B,K,x0,T):
+    def simulate_discrete(A,B,K,x0,u0,T):
         '''
         simulates the linear system (A,B) with static control law
         u(t) = K @ x(t)
@@ -41,7 +41,7 @@ class control:
         rows are indexed by time
         '''
         x = x0
-        u = np.array(0).reshape(1,1) #init to 0
+        u = u0
         for t in range(T):
             u_t = np.matmul(-K, x[:,[-1]])
             x_prime = np.matmul(A, x[:,[-1]]) + np.matmul(B, u_t)
